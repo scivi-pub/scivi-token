@@ -1,5 +1,5 @@
-# scivi-token
+# Scivi-token
 
-this version allows token creation with limited initial supply, emission at time intervals (currently 60 sec) and at limited amount (curently 1000), allows name and symbol designation as well as token burning. Works with Solidity 0.4.23 in Remix IDE. Other enviroments were not tested.
+this contract allows token creation with a limited initial supply, emission allowed only at time intervals (currently 60 sec) and at limited amount (curently 1000), also allows name and symbol designation as well as a token burning. Works with Solidity 0.4.23 
 
-Based on Zeppelin-Solidity https://github.com/OpenZeppelin/zeppelin-solidity/blob/master/contracts/token/ERC20/MintableToken.sol
+Modified from Zeppelin-Solidity https://github.com/OpenZeppelin/zeppelin-solidity/blob/master/contracts/token/ERC20/MintableToken.sol
