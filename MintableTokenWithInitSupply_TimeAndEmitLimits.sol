@@ -104,4 +104,4 @@ function mintTimer() internal view returns (bool) {       // checks if mintInter
         return true;
     }
 
-   
+  } 
