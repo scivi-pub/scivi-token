@@ -1,7 +1,6 @@
 pragma solidity ^0.4.23;
 
 
-import "./ERC20Basic.sol";
 import "./SafeMath.sol";
 import "./Ownable.sol";
 
@@ -11,16 +10,21 @@ import "./Ownable.sol";
  * @title Basic token
  * @dev Basic version of StandardToken, with no allowances.
  */
-contract BasicToken is ERC20Basic, Ownable {                //added Ownable contract to add onlyOwner modifier to transfer function
+ 
+  contract BasicToken is Ownable {
   using SafeMath for uint256;
 
   mapping(address => uint256) balances;
 
   uint256 totalSupply_;
-
+  
+  event Transfer(address indexed from, address indexed to, uint256 value);
+  
+  
   /**
   * @dev total number of tokens in existence
   */
+  
   function totalSupply() public view returns (uint256) {
     return totalSupply_;
   }
@@ -30,7 +34,7 @@ contract BasicToken is ERC20Basic, Ownable {                //added Ownable cont
   * @param _to The address to transfer to.
   * @param _value The amount to be transferred.
   */
-  function transfer(address _to, uint256 _value) onlyOwner public returns (bool) {      //added onlyOwner modifier
+  function transfer(address _to, uint256 _value) onlyOwner public returns (bool) {
     require(_to != address(0));
     require(_value <= balances[msg.sender]);
 
