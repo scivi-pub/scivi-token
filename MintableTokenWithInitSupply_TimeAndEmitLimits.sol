@@ -90,5 +90,7 @@ contract MintableWithLimits is BasicToken {
         return true;
     }
 
+
    
 }
+  } 
